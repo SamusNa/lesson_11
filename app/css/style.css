@@ -7,11 +7,54 @@
     background-color: burlywood;
     padding: 10px;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.one, .two, .three {
+    float: left;
+    height: 50vh;
+}
+
+.one {
+    background: orangered;
+    width: 33%;
+}
+
+.two {
+    background: blueviolet;
+    width: 33%;
+}
+
+.three {
+    background: brown;
+    width: 33%;
 }
 
 @media (max-width: 800px) {
     .container {
         background-color: green;
     }
+    .one, .two {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .three {
+        width: 100%;
+    }
 }
+
+@media (max-width: 500px) {
+    .container {
+        background-color: orange;
+    }
+    .one, .two {
+        width: 100%;
+    }
+}
+
